@@ -1,0 +1,17 @@
+selectAll:
+SELECT *
+FROM hockeyPlayer;
+
+selectByPosition:
+SELECT *
+FROM hockeyPlayer
+WHERE position = ?;
+
+insertPlayer:
+INSERT
+INTO hockeyPlayer(player_number, full_name, position, shoots, height, weight, date_of_birth, place_of_birth)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+
+selectMinMax:
+SELECT min(player_number), max(player_number)
+FROM hockeyPlayer;
